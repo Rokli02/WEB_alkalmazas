@@ -1,3 +1,3 @@
 # Maven JavaServlet Project
 
-A a szerveren futó program, egy egyszerű számológépet ábrázol, amivel az alapműveleteket (pl.: összeadás, kivonás, szorzás, osztás) el lehet végezni és annak kiírja a végeredményét. Hibakezelés történik a háttérbe ezért rosszul megadott tagok, értékek esetén erre figyelmeztet minket.
+Ez egy szerveren futó program, ami egy egyszerű számológépet ábrázol, amivelalapműveleteket (pl.: összeadás, kivonás, szorzás, osztás) lehet elvégezni és annak kiírja a végeredményét. Hibakezelés történik a háttérbe ezért rosszul megadott tagok, értékek esetén erre figyelmeztet minket.
