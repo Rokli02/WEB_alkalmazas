@@ -1,6 +1,5 @@
 package hu.me.iit.webalk.first;
 
-
 import java.util.List;
 
 import javax.validation.Valid;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path="article")
 public class MainController {
-	//Linux hostname: lab101-11.iit.uni-miskolc.hu
 	private final ArticleService articleService;
 	
 	public MainController(ArticleService articleService) {
