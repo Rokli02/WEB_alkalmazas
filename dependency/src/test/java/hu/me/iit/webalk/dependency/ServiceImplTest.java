@@ -70,7 +70,7 @@ class ServiceImplTest {
 	}
 	
 	@Test
-	void getImportantAbstractCallImportant() {
+	void getImportantAbstractCallImportantTest() {
 		//GIVEN
 		final String TEXT = "important";
 		final String EXPECT = "imp...";
@@ -82,5 +82,18 @@ class ServiceImplTest {
 		//THEN
 		verify(dependency, times(1)).important(captor.capture());
 		assertEquals(EXPECT, captor.getValue());
+	}
+	
+	@Test
+	void getImportantAbstractTest() {
+		//GIVEN
+		final String TEXT = "important";
+		final String EXPECT = "<b>imp...</b>";
+		
+		//WHEN
+		String result = service.getImportantAbstract(TEXT);
+		
+		//THEN
+		assertEquals(EXPECT, result);
 	}
 }
