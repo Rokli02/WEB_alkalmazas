@@ -19,7 +19,7 @@ public class ThirdController {
 	@ResponseBody
 	@GetMapping("/c")
 	public String getCRoot() {
-		Service service = context.getBean("myService", Service.class); 
+		Service service = context.getBean("myService", Service.class);
 		return service.getValue();
 	}
 	
