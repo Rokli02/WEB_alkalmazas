@@ -1,4 +1,4 @@
-package hu.me.iit.webalk.db;
+package hu.me.iit.webalk.db.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 

@@ -1,30 +1,22 @@
-package hu.me.iit.webalk.db;
+package hu.me.iit.webalk.db.controller;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-public class PeopleDto {
-	private Long id;
+import hu.me.iit.webalk.db.service.People;
+
+public class PeopleCreateDto {
 	@NotEmpty
 	private String name;
 	@Size(min = 18)
 	private int age;
 	
-	public PeopleDto() {
+	public PeopleCreateDto() {
 		
 	}
-	public PeopleDto(People people) {
-		this.id = people.getId();
+	public PeopleCreateDto(People people) {
 		this.name = people.getName();
 		this.age = people.getAge();
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -43,5 +35,7 @@ public class PeopleDto {
 		this.age = age;
 	}
 	
-	
+	public People toPeople() {
+		return new People(null, age, name);
+	}
 }
