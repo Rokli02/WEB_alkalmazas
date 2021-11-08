@@ -1,14 +1,14 @@
 package hu.me.iit.webalk.db.controller;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 import hu.me.iit.webalk.db.service.People;
 
 public class PeopleCreateDto {
 	@NotEmpty
 	private String name;
-	@Size(min = 18)
+	@Min(18)
 	private int age;
 	
 	public PeopleCreateDto() {

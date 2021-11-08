@@ -1,16 +1,9 @@
 package hu.me.iit.webalk.db.service;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 public class People {
-	@Id
-	@GeneratedValue
+
 	private Long id;
-	
 	private int age;
-	
 	private String name;
 
 	public Long getId() {

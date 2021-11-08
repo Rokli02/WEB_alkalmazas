@@ -26,7 +26,6 @@ public class PeopleServiceImpl implements PeopleService {
 
 	@Override
 	public People create(People people) {
-		
 		return new People(peopleRepository.save(people.toEntity()));
 	}
 

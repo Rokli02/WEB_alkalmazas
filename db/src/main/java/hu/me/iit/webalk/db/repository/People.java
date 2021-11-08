@@ -2,18 +2,21 @@ package hu.me.iit.webalk.db.repository;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.lang.NonNull;
 
 @Entity
 public class People {
+
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@NonNull
 	private Long id;
-	
+	private String name;
 	private int age;
 	
-	private String name;
-
 	public Long getId() {
 		return id;
 	}
