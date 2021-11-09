@@ -29,7 +29,18 @@ public class PeopleServiceImpl implements PeopleService {
 		return new People(peopleRepository.save(people.toEntity()));
 	}
 
-	
+	@Override
+	public boolean deleteById(Long id) {
+		Iterable<People> people = getAllPeople();
+		for(People person : people) {
+			if(person.getId().equals(id)) {
+				peopleRepository.deleteById(id);
+				return true;
+			}
+		}
+		
+		return false;
+	}
 }
 
 /*
