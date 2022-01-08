@@ -28,7 +28,7 @@ public class Tree {
 	}
 	
 	public TreeEntity toEntity() {
-		return new TreeEntity(id, name, className, crop, maxHeight);
+		return new TreeEntity(null, name, className, crop, maxHeight);
 	}
 
 	public Long getId() {
